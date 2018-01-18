@@ -1,0 +1,41 @@
+<div class="name-container">
+    <h1>{{key}}</h1>
+</div>
+<div class="dashboard-wrapper">
+  <div class="flex-container-col">
+    <div class="flex-item create-room dashboard-spacing">
+      <div class="room-name">
+          <h3>Current Song</h3>
+          <h5> {{current_song?.song_name}}</h5>
+          <h5> {{current_song?.song_artist}}</h5>
+          <hr>
+      </div>
+      <div class="playlist">
+        <div class="song-name">
+        </div>
+        <div class="add-song">
+          <label for="name" class="input-label">Song Name</label>
+          <input #song_name type="text" class="input-text">
+          <button type="button" class="input-btn" (click)="SongSearch(song_name.value)">Add Song</button>
+        </div>
+        <h5 style="text-align: center;margin-top: 5%;">Current Playlist</h5>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Song</th>
+              <th>Artist</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let song of playlist">
+                <td [ngClass]="{'active-song': current_song?.order == song.order, '': current_song?.order != song.order}">{{song.order}}</td>
+                <td [ngClass]="{'active-song': current_song?.order == song.order, '': current_song?.order != song.order}">{{song.song_name}}</td>
+                <td [ngClass]="{'active-song': current_song?.order == song.order, '': current_song?.order != song.order}">{{song.song_artist}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

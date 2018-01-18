@@ -1,0 +1,27 @@
+<div class="name-container">
+    <h1>DJ Rooms</h1>
+    <h3>Dashboard</h3>
+</div>
+<div class="dashboard-wrapper">
+  <div class="flex-container-col">
+    <div class="flex-item create-room dashboard-spacing">
+      <div class="header" style="margin-top: 2%">
+        <h1>Create a Room</h1>
+      </div>
+      <div class="form">
+          <label for="name" class="input-label">Room Key</label>
+          <input #create_key type="text" class="input-text">
+          <button type="button" class="input-btn" (click)="CreateRoom(create_key.value)">Create Room</button>
+      </div>
+      <div class="spacing"></div>
+      <div class="header" style="margin-top: 2%">
+        <h1>Join a Room</h1>
+      </div>
+      <div class="form">
+          <label for="name" class="input-label">Room Key<span *ngIf="wrong_room"> - That Room Key is Invalid</span></label>
+          <input #join_key type="text" class="input-text">
+          <button type="button" class="input-btn" (click)="JoinRoom(join_key.value)">Join Room</button>
+      </div>
+    </div>
+  </div>
+</div>

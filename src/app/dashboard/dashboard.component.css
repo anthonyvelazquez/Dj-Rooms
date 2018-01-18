@@ -1,0 +1,58 @@
+.name-container {
+    width: 60%;
+    margin: 0 auto;
+    height: 100px;
+    background-color: rgba(0,0,0,.6);
+    color: #C5C1C0;
+    border-radius: 20px;
+    text-align: center;
+    border: 1px solid white;
+    display: block;
+}
+
+.dashboard-spacing {
+    margin: 1% 5%;
+}
+
+.create-room {
+    background-color: rgba(0,0,0,.6);
+    color: #C5C1C0;
+    border-radius: 20px;
+    border: 1px solid white;
+    padding: 1% 5%;
+}
+
+.spacing {
+    width: 100%;
+    margin: 1% 0;
+    height: 3px;
+    background-color: white;
+}
+
+.form {
+    padding: 0 5%;
+    margin-bottom: 5%;
+    text-align: left;
+}
+.input-label {
+    display: block;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.input-text {
+    background: 0;
+    outline: 0;
+    color: white;
+    margin-bottom: 20px;
+    /* border: 0;
+    border-bottom: 2px;
+    border-color: white;
+    border-style: solid; */
+    border-radius: 7px;
+    width: 50%;
+}
+
+.input-btn {
+    display: block;
+}
